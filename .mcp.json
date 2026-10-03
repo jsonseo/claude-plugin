@@ -2,10 +2,7 @@
   "mcpServers": {
     "jsonseo": {
       "type": "http",
-      "url": "https://jsonseo.ru/mcp",
-      "headers": {
-        "Authorization": "Bearer ${user_config.api_key}"
-      }
+      "url": "https://jsonseo.ru/mcp"
     }
   }
 }

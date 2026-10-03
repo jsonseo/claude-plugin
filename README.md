@@ -9,8 +9,8 @@
 *English summary: this plugin connects Claude to the JSON SEO MCP server for
 Yandex, Google and Bing search results, site rankings, autocomplete
 suggestions, Yandex Wordstat keyword data and Yandex Direct budget forecasts.
-Skills teach Claude which tool to use for which SEO task. A JSON SEO API key is
-required; usage is billed per the JSON SEO tariff.*
+Skills teach Claude which tool to use for which SEO task. Sign-in is via OAuth on
+jsonseo.ru; usage is billed per the JSON SEO tariff.*
 
 ## Что умеет
 
@@ -26,10 +26,11 @@ required; usage is billed per the JSON SEO tariff.*
 
 ## Как пользоваться
 
-1. Зарегистрируйтесь на [jsonseo.ru](https://jsonseo.ru) и возьмите API-ключ
-   в личном кабинете. Пополните баланс — инструменты платные.
-2. Установите плагин. При включении Claude Code спросит API-ключ и сохранит
-   его в защищённом хранилище; в файлы плагина ключ не попадает.
+1. Зарегистрируйтесь на [jsonseo.ru](https://jsonseo.ru) и пополните баланс —
+   инструменты платные.
+2. Установите плагин и подключите коннектор JSON SEO: откроется страница
+   входа jsonseo.ru, нажмите «Разрешить». В Claude Code — `/mcp` → jsonseo →
+   Authenticate. Ключ вводить не нужно.
 3. Спрашивайте в чате: «Какая позиция у example.com в Яндексе по запросу
    „купить ноутбук“ в Казани?», «Собери семантику вокруг „ремонт айфона“
    с точной частотностью», «Посчитай бюджет Директа для этого списка фраз
@@ -49,19 +50,22 @@ Claude сам подберёт регион через `yandex_regions`/`google_
 
 Плагин не запускает локального кода и ничего не хранит на компьютере. Все
 вызовы инструментов уходят по HTTPS на `https://jsonseo.ru/mcp` с заголовком
-`Authorization: Bearer <ваш API-ключ>`. На сервер передаются только параметры
+`Authorization: Bearer <OAuth-токен>`. На сервер передаются только параметры
 инструментов: поисковые запросы, домены, регионы, списки фраз. Ответы
 приходят от JSON SEO в структурированном виде. Условия использования:
 <https://jsonseo.ru/offer>.
 
 ## Ручное подключение без плагина
 
-Сервер можно подключить и напрямую:
+Сервер можно подключить и напрямую, вход через OAuth откроется так же
+(`/mcp` → jsonseo → Authenticate):
 
 ```bash
-claude mcp add --transport http jsonseo https://jsonseo.ru/mcp \
-  --header "Authorization: Bearer <API-ключ>"
+claude mcp add --transport http jsonseo https://jsonseo.ru/mcp
 ```
+
+Как альтернатива по-прежнему работает заголовок с API-ключом
+(`Authorization: Bearer <API-ключ>`).
 
 ## Конфиденциальность
 

@@ -1,7 +1,7 @@
 {
   "name": "jsonseo",
   "displayName": "JSON SEO",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Поисковая выдача и позиции сайта в Яндексе, Google и Bing, Яндекс Вордстат и прогноз бюджета Директа прямо в Claude. Search results, site rankings, Yandex Wordstat and Yandex Direct budget forecasts for SEO work.",
   "author": {
     "name": "JSON SEO",
@@ -26,14 +26,5 @@
   "documentationUrl": "https://jsonseo.ru/mcp-docs",
   "supportUrl": "https://jsonseo.ru/mcp-docs",
   "privacyPolicyUrl": "https://jsonseo.ru/offer#privacy",
-  "termsOfServiceUrl": "https://jsonseo.ru/offer",
-  "userConfig": {
-    "api_key": {
-      "type": "string",
-      "title": "JSON SEO API key",
-      "description": "API-ключ из личного кабинета jsonseo.ru. Тот же ключ, что и для обычного API. / Your API key from the jsonseo.ru dashboard.",
-      "sensitive": true,
-      "required": true
-    }
-  }
+  "termsOfServiceUrl": "https://jsonseo.ru/offer"
 }
