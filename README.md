@@ -63,6 +63,11 @@ claude mcp add --transport http jsonseo https://jsonseo.ru/mcp \
   --header "Authorization: Bearer <API-ключ>"
 ```
 
+## Конфиденциальность
+
+Обработка персональных данных описана в разделе 8 оферты:
+<https://jsonseo.ru/offer#privacy> (Privacy Policy).
+
 ## Лицензия
 
 MIT. Сам сервис JSON SEO — коммерческий, см. [оферту](https://jsonseo.ru/offer).

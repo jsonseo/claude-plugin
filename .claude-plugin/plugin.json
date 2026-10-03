@@ -11,9 +11,21 @@
   "homepage": "https://jsonseo.ru/mcp-docs",
   "repository": "https://github.com/jsonseo/claude-plugin",
   "license": "MIT",
-  "keywords": ["seo", "serp", "yandex", "google", "bing", "wordstat", "yandex-direct", "keywords", "rank-tracking"],
+  "icon": "./.claude-plugin/icon.png",
+  "keywords": [
+    "seo",
+    "serp",
+    "yandex",
+    "google",
+    "bing",
+    "wordstat",
+    "yandex-direct",
+    "keywords",
+    "rank-tracking"
+  ],
   "documentationUrl": "https://jsonseo.ru/mcp-docs",
   "supportUrl": "https://jsonseo.ru/mcp-docs",
+  "privacyPolicyUrl": "https://jsonseo.ru/offer#privacy",
   "termsOfServiceUrl": "https://jsonseo.ru/offer",
   "userConfig": {
     "api_key": {
